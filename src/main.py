@@ -21,7 +21,7 @@ app = FastAPI(lifespan=lifespan)
 
 @app.get("/", response_class=PlainTextResponse)
 async def root():
-    return "Timeweb Cloud + Docker-Compose + FastAPI = ❤️"
+    return "Timeweb.Cloud + Docker-Compose + FastAPI = ❤️"
 
 @app.get("/dog/{id}")
 async def get_a_dog(id: str, dog_repo: DogRepository = Depends(get_dog_repository)) -> Dog:
